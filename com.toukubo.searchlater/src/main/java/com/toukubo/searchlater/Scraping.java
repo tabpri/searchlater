@@ -12,13 +12,13 @@ import org.jsoup.select.Elements;
 public class Scraping {
 	List<String> urls = new ArrayList<String>();
 	public static void main(String[] args) {
-		Scraping scraping = new Scraping();
+		Scraping scraping = new Scraping("ipad");
 		new ListToTexts(scraping.getUrls());
 	}
-	public Scraping() {    
+	public Scraping(String query) {    
 		Document doc;
 		try{
-			String query = "java+wordpress+maven";
+//			query = "java+wordpress+maven";
 			doc =        Jsoup.connect("https://www.google.com/search?as_q=&as_epq=%22"+query+"%22+&as_oq=fraud+OR+allegations+OR+scam&as_eq=&as_nlo=&as_nhi=&lr=lang_en&cr=countryCA&as_qdr=all&as_sitesearch=&as_occt=any&safe=images&tbs=&as_filetype=&as_rights=").userAgent("Mozilla").ignoreHttpErrors(true).timeout(0).get();
 			Elements links = doc.select("li[class=g]");
 			for (Element link : links) {
