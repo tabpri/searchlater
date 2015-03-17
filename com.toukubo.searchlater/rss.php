@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="robots" content="noindex,nofollow">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>PHPでAtom Feedを作成するデモ</title>
-		<style>
-textarea{
-	width:95%;
-	height:300px;
-}
-		</style>
-	</head>
-<body>
-<h1>PHPでAtom Feedを作成するデモ</h1>
-<p>PHPを使って、Atom Feedを作成するサンプルデモです。</p>
-<p style="text-align:right">(プログラムの配布元: <a href="http://syncer.jp/how-to-make-feed-by-php">Syncer</a>)</p>
-
 <?php
 
 	//ライブラリの読み込み
@@ -55,9 +36,10 @@ textarea{
 	//ファイルの保存場所を設定
 	$file = "./atom.xml";
 
+    echo $xml;
 	//ファイルの保存を実行
-	@file_put_contents( $file , $xml );
-
+	<!-- @file_put_contents( $file , $xml ); -->
+exit;
 ?>
 
 <h2>生成したコード</h2>

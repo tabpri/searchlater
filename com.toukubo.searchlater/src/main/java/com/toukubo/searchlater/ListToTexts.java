@@ -10,7 +10,7 @@ public class ListToTexts {
 	public ListToTexts(List<String> lines){
 		FileWriter writer;
 		try {
-			writer = new FileWriter(new File(this.filename));
+			writer = new FileWriter(new File(this.filename),true);
 			for (String line : lines) {
 				writer.write(line + "\r\n");
 			}

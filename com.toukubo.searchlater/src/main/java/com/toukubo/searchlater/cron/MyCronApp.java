@@ -22,7 +22,7 @@ public class MyCronApp {
 	  public  void schedulerSimple() {
 	    Scheduler scheduler = new Scheduler();
 	    // every minute.
-	    scheduler.schedule("*/5 * * * *", new CronTask());
+	    scheduler.schedule("*/12 * * * *", new CronTask());
 	    // start cron4j scheduler.
 	    scheduler.start();
 	  }

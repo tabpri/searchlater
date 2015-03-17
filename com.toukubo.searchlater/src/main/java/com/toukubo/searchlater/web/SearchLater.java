@@ -23,6 +23,8 @@ import com.toukubo.searchlater.Scraping;
 	        try {
 	        	response.setHeader("Access-Control-Allow-Origin", "*");
 	    		Scraping scraping = new Scraping(request.getParameter("query"));
+	    		System.err.println("--------------------");
+	    		System.err.println("-------------------- query: "+ request.getParameter("query"));
 	    		new ListToTexts(scraping.getUrls());
 
 	        	
